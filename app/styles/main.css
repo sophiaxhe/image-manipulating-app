@@ -1,0 +1,47 @@
+img {
+  width: 400px;
+  height: 300px;
+}
+
+
+.previewImage {
+  text-align: center;
+  margin: 100px;
+  height: 300px;
+  width: 400px;
+  border: 1px solid black;
+}
+
+
+.imgOpacity {
+  opacity: 0.5;
+}
+
+.scaler{
+  height: 600px;
+  width: 800px;
+}
+
+.rotator{
+  -webkit-transform: rotate(45deg);
+
+}
+.btnHiden{
+  visibility: hidden;
+}
+
+.translator{
+  transform: translateX(-40px)
+}
+
+.resetBtn{
+  margin:30%;
+}
+
+.container{
+ margin: auto;
+}
+
+.selected{
+  margin-top:0;
+}
