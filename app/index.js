@@ -24,12 +24,16 @@ var Image = React.createClass({
 
 
 return (
-      <div>
-        <img src={imageSrc} className={classNames({ rotator: rotate, translator: translate, scaler: scale, imgOpacity: opacity })} />
-        <div>
+
+  <div id="content">
+    <div className="">
+
+            <img src={imageSrc} className={classNames({ rotator: rotate, translator: translate, scaler: scale, imgOpacity: opacity })} />
+            <div>
           <input type="file" onChange={this.handleChangeFile} />
-        </div>
+            </div>
       </div>
+    </div>
     );
   }
 });
@@ -85,49 +89,57 @@ var Controls = React.createClass({
 
     return (
       <div>
-      <h3>Available Action</h3>
-           <button type="button" checked={rotate} className={rotateButton} onClick={this.props.onRequestChangeRotate}>
-           <span>Rotate</span>
-           </button>
 
-           <button type="button" checked={translate} className={translateButton} onClick={this.props.onRequestChangeTranslate}>
-           <span>Translate</span>
-           </button>
 
-           <button type="button" checked={opacity} className={opacityButton} onClick={this.props.onRequestChangeOpacity}>
-           <span>Opacity</span>
-           </button>
+        <div id="middle">
+            <h3>Available Action</h3>
+             <button type="button" checked={rotate} className={rotateButton} onClick={this.props.onRequestChangeRotate}>
+             <span>Rotate</span>
+             </button>
 
-           <button type="button" checked={scale} className={scaleButton} onClick={this.props.onRequestChangeScale}>
-           <span>Scale</span>
-           </button>
+             <button type="button" checked={translate} className={translateButton} onClick={this.props.onRequestChangeTranslate}>
+             <span>Translate</span>
+             </button>
 
-           <div className="selected">
-      <h3>Applied Action</h3>
-           <button type="button" checked={rotate} className={rotateAppliedButton} onClick={this.props.onRequestChangeRotate}>
-           <span>Rotate</span>
-           </button>
+             <button type="button" checked={opacity} className={opacityButton} onClick={this.props.onRequestChangeOpacity}>
+             <span>Opacity</span>
+             </button>
 
-           <button type="button" checked={translate} className={translateAppliedButton} onClick={this.props.onRequestChangeTranslate}>
-           <span>Translate</span>
-           </button>
+             <button type="button" checked={scale} className={scaleButton} onClick={this.props.onRequestChangeScale}>
+             <span>Scale</span>
+             </button>
+        </div>
 
-           <button type="button" checked={opacity} className={opacityAppliedButton} onClick={this.props.onRequestChangeOpacity}>
-           <span>Opacity</span>
-           </button>
 
-           <button type="button" checked={scale} className={scaleAppliedButton} onClick={this.props.onRequestChangeScale}>
-           <span>Scale</span>
-           </button>
-           </div>
+          <div id="sidebar">
+          <h3>Applied Action</h3>
+             <button type="button" checked={rotate} className={rotateAppliedButton} onClick={this.props.onRequestChangeRotate}>
+             <span>Rotate</span>
+             </button>
 
-         <div>
-           <button onClick={this.handleClickReset}>Reset</button>
-         </div>
-       </div>
+             <button type="button" checked={translate} className={translateAppliedButton} onClick={this.props.onRequestChangeTranslate}>
+             <span>Translate</span>
+             </button>
+
+             <button type="button" checked={opacity} className={opacityAppliedButton} onClick={this.props.onRequestChangeOpacity}>
+             <span>Opacity</span>
+             </button>
+
+             <button type="button" checked={scale} className={scaleAppliedButton} onClick={this.props.onRequestChangeScale}>
+             <span>Scale</span>
+             </button>
+
+        <div>
+          <button onClick={this.handleClickReset}>Reset</button>
+        </div>
+      </div>
+      </div>
+
+
     );
   }
 });
+
 
 var StateContainer = React.createClass({
   getInitialState: function() {

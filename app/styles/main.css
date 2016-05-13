@@ -1,5 +1,5 @@
 img {
-  width: 400px;
+  width: 296px;
   height: 300px;
 }
 
@@ -18,8 +18,8 @@ img {
 }
 
 .scaler{
-  height: 600px;
-  width: 800px;
+  height: 150px;
+  width: 158px;
 }
 
 .rotator{
@@ -38,10 +38,205 @@ img {
   margin:30%;
 }
 
-.container{
- margin: auto;
+.col-xs-6{
+  height:30px;
+  width: 100px
 }
 
-.selected{
-  margin-top:0;
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 20px 15px 10px 40px;
+ }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #33c3f0;
+  padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}
+
+header {
+    height: 100px;
+    padding: 0 15px;
+  }
+
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+}
+
+/* STRUCTURE */
+
+#pagewrap {
+    padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}
+header {
+    height: 100px;
+    padding: 0 15px;
+}
+#content {
+    width: 290px;
+    float: left;
+    padding: 5px 15px;
+}
+
+#middle {
+    width: 294px; /* Account for margins + border values */
+    float: left;
+    padding: 5px 15px;
+    margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+    width: 270px;
+    padding: 5px 15px;
+    float: left;
+}
+footer {
+    clear: both;
+    padding: 0 15px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+
+    #pagewrap {
+        width: 94%;
+    }
+    #content {
+        width: 41%;
+        padding: 1% 4%;
+    }
+    #middle {
+        width: 41%;
+        padding: 1% 4%;
+        margin: 0px 0px 5px 5px;
+        float: right;
+    }
+
+    #sidebar {
+        clear: both;
+        padding: 1% 4%;
+        width: auto;
+        float: none;
+    }
+
+    header, footer {
+        padding: 1% 4%;
+    }
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+    #content {
+        width: auto;
+        float: none;
+    }
+
+    #middle {
+        width: auto;
+        float: none;
+        margin-left: 0px;
+    }
+
+    #sidebar {
+        width: auto;
+        float: none;
+    }
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+    header {
+        height: auto;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #sidebar {
+        display: none;
+    }
+
+}
+
+
+#content {
+}
+#sidebar {
+}
+header, #content, #middle, #sidebar {
+    margin-bottom: 5px;
+}
+
+#pagewrap, header, #content, #middle, #sidebar, footer {
 }
